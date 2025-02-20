@@ -1,20 +1,4 @@
 import os
-import subprocess
-import sys
-# Function to install missing packages
-def install_missing_packages():
-    required_packages = ["matplotlib", "numpy", "requests", "streamlit", "plotly", "pandas"]
-
-    for package in required_packages:
-        try:
-            __import__(package)
-        except ImportError:
-            print(f"Installing missing package: {package}...")
-            subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-
-
-# Run installation
-install_missing_packages()
 import requests
 import zipfile
 import pickle
