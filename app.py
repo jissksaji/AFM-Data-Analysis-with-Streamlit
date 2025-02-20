@@ -5,7 +5,7 @@ import pickle
 import numpy as np
 import streamlit as st
 #import matplotlib.pyplot as plt
-import plotly.express as px
+#import plotly.express as px
 
 # Nextcloud direct download link
 DATA_URL = "https://kingsx.cs.uni-saarland.de/index.php/s/KFrpMwCfJtaLpX3/download"
@@ -163,7 +163,7 @@ force_plot = do_plot(choice, force_distance_data, calculated_slope, anchor_point
 
 st.pyplot(force_plot)
 
-# Heatmap Visualizations
+"""# Heatmap Visualizations
 st.subheader("Slope Heatmap")
 slope_heatmap = px.imshow(slope_heatmaps[series], color_continuous_scale='turbo', origin='lower', zmin=-0.013,
                           zmax=-0.003)
@@ -174,3 +174,4 @@ st.subheader("Height Heatmap")
 height_heatmap = px.imshow(H, color_continuous_scale='turbo', origin='lower')
 height_heatmap.update_yaxes(autorange="reversed")
 st.plotly_chart(height_heatmap)
+"""
