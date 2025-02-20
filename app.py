@@ -85,19 +85,19 @@ def do_plot(point, curve, slope=None, anchors=None):
     s, i, j = point
     d, f = curve
 
-    fig = plt.figure(figsize=[10, 6])
-    plt.xlabel("Distance (m)")
-    plt.ylabel("Force (N)")
-    plt.scatter(d, f, s=1, label=f'Data at ({i}, {j})')
+    #fig = plt.figure(figsize=[10, 6])
+    #plt.xlabel("Distance (m)")
+    #plt.ylabel("Force (N)")
+    #plt.scatter(d, f, s=1, label=f'Data at ({i}, {j})')
 
     if slope is not None and anchors is not None:
         anchor1, anchor2 = anchors
-        plt.axline(anchor1, slope=slope, color='red', linestyle='--', label=f'{slope:.4g} N/m')
-        plt.plot([anchor1[0]], [anchor1[1]], 'rx')
-        plt.plot([anchor2[0]], [anchor2[1]], 'rx')
+        #plt.axline(anchor1, slope=slope, color='red', linestyle='--', label=f'{slope:.4g} N/m')
+        #plt.plot([anchor1[0]], [anchor1[1]], 'rx')
+        #plt.plot([anchor2[0]], [anchor2[1]], 'rx')
 
-    plt.legend()
-    return fig
+    #plt.legend()
+    #return fig
 
 
 def estimate_slope(curve, s):
